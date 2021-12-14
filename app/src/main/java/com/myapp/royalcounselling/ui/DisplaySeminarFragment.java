@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -36,8 +37,6 @@ public class DisplaySeminarFragment extends Fragment {
     ArrayList<Seminar> seminarsList = new ArrayList<>();
     ListView listView;
     Button viewRegistered;
-
-
     TextView textView;
 
     @Override
@@ -57,8 +56,6 @@ public class DisplaySeminarFragment extends Fragment {
         progressDialog.show();
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, urlPost, response -> {
-
-
             Log.e("TAG", "onResponse: " + response);
             String seminarID;
             String seminarName;

@@ -3,6 +3,7 @@ package com.myapp.royalcounselling;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -24,7 +25,7 @@ import java.util.Map;
 
 public class IndividualSeminarActivity extends AppCompatActivity {
 
-    TextView seminarName, seminarDescription, sStart, sEnd, rStart, rEnd, type;
+    TextView seminarName, seminarDescription, sStart, sEnd, rStart, rEnd, type, sFees, sFeesFixed, pLink, pLinkFixed;
     Button registerButton;
     EditText purpose;
 
@@ -42,7 +43,12 @@ public class IndividualSeminarActivity extends AppCompatActivity {
         String seminarStart = intent.getStringExtra("seminarStart");
         String seminarEnd = intent.getStringExtra("seminarEnd");
         String seminarId = intent.getStringExtra("seminarId");
+        String seminarFees = intent.getStringExtra("seminarFees");
         seminarName = findViewById(R.id.tv_seminar_name);
+        sFees = findViewById(R.id.tv_seminar_fees);
+        sFees.setVisibility(View.GONE);
+        sFeesFixed = findViewById(R.id.tv_seminar_fees_fixed);
+        sFeesFixed.setVisibility(View.GONE);
         seminarDescription = findViewById(R.id.tv_seminar_description);
         sStart = findViewById(R.id.tv_seminar_start);
         sEnd = findViewById(R.id.tv_seminar_end);
@@ -51,10 +57,24 @@ public class IndividualSeminarActivity extends AppCompatActivity {
         type = findViewById(R.id.tv_seminar_type);
         purpose = findViewById(R.id.edt_purpose);
         registerButton = findViewById(R.id.btn_register_seminar);
+        pLink = findViewById(R.id.tv_payment_link);
+        pLinkFixed = findViewById(R.id.tv_payment_link_fixed);
 
         SharedPreferences sharedPreferences = getSharedPreferences("MYAPP", MODE_PRIVATE);
         String email = sharedPreferences.getString("KEY_EMAIL", "");
 
+        if (seminarFees.equals("0.0")) {
+            sFees.setVisibility(View.GONE);
+            sFeesFixed.setVisibility(View.GONE);
+            pLinkFixed.setVisibility(View.GONE);
+            pLink.setVisibility(View.GONE);
+        } else {
+            sFees.setText(seminarFees);
+            sFeesFixed.setVisibility(View.VISIBLE);
+            sFees.setVisibility(View.VISIBLE);
+            pLinkFixed.setVisibility(View.VISIBLE);
+            pLink.setVisibility(View.VISIBLE);
+        }
 
         seminarName.setText(name);
         seminarDescription.setText(description);
@@ -63,14 +83,34 @@ public class IndividualSeminarActivity extends AppCompatActivity {
 //        rStart.setText(registrationStart);
         rEnd.setText(registrationEnd);
         type.setText(seminarType);
+        pLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = pLink.getText().toString();
+                Intent webIntent = new Intent(Intent.ACTION_VIEW);
+                webIntent.setData(Uri.parse(url));
+                startActivity(webIntent);
+            }
+        });
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadData(purpose.getText().toString(), email, seminarId);
+                Toast.makeText(IndividualSeminarActivity.this,"Fees is : "+sFees.getText().toString(),Toast.LENGTH_LONG).show();
+                if(sFees.getVisibility() == View.GONE){
+                    loadData(purpose.getText().toString(), email, seminarId);
+                }else{
+
+
+                    String url = pLink.getText().toString();
+                    Intent webIntent = new Intent(Intent.ACTION_VIEW);
+                    webIntent.setData(Uri.parse(url));
+                    startActivity(webIntent);
+                    //finish();
+                    loadData(purpose.getText().toString(), email, seminarId);
+                }
             }
         });
-
     }
 
     private void loadData(String purpose, String email, String seminarId) {
@@ -111,7 +151,11 @@ public class IndividualSeminarActivity extends AppCompatActivity {
                 }
 
                 startActivity(intent);
-                Toast.makeText(IndividualSeminarActivity.this, "Seminar link sent on your email.", Toast.LENGTH_LONG).show();
+                if (sFees.getVisibility() == View.GONE) {
+                    Toast.makeText(IndividualSeminarActivity.this, "Seminar link sent on your email.", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(IndividualSeminarActivity.this, "Seminar link will be sent once the admin approves the payment.", Toast.LENGTH_LONG).show();
+                }
 
 
             } catch (Exception e) {

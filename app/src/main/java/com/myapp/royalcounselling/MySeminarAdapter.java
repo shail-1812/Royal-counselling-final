@@ -67,6 +67,7 @@ public class MySeminarAdapter extends BaseAdapter {
                 String seminarStart = seminar.getSeminarStart();
                 String seminarEnd = seminar.getSeminarEnd();
                 String seminarID = seminar.getSeminarId();
+                String seminarFees = seminar.getSeminarFees();
                 if (seminarIntent.equals("nonRegistered")) {
                     Intent i = new Intent(context, IndividualSeminarActivity.class);
                     i.putExtra("seminarName", seminarName);
@@ -77,6 +78,8 @@ public class MySeminarAdapter extends BaseAdapter {
                     i.putExtra("seminarStart", seminarStart);
                     i.putExtra("seminarEnd", seminarEnd);
                     i.putExtra("seminarId", seminarID);
+                    i.putExtra("seminarFees", seminarFees);
+
                     context.startActivity(i);
                 } else if (seminarIntent.equals("registered")) {
                     Intent i = new Intent(context, IndividualRegisteredActivity.class);
