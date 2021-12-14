@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/edt_request_ppt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edt_background"
+        android:hint="Request Presentation"
+        android:inputType="text"
+        android:padding="15dp"
+        android:textColor="#9C000000"
+        android:textColorHint="#9C000000"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <android.widget.Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="#00FFFFFF"
+            android:text="Cancel"
+            android:textColor="#000"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+
+        <android.widget.Button
+            android:id="@+id/btn_request"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="#00FFFFFF"
+            android:text="Request"
+            android:textColor="#000"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</LinearLayout>

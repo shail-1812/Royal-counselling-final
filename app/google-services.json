@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "658740972567",
+    "firebase_url": "https://royal-application-5f683-default-rtdb.firebaseio.com",
+    "project_id": "royal-application-5f683",
+    "storage_bucket": "royal-application-5f683.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658740972567:android:6804806617c47c32e02052",
+        "android_client_info": {
+          "package_name": "com.myapp.royalcounselling"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "658740972567-c84je4pmsses7bqdj8i1cg7o7k138m5i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDab6yKK9Sra7UA2bVT44NjcOMafu-_dCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658740972567-c84je4pmsses7bqdj8i1cg7o7k138m5i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

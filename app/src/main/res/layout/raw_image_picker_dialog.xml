@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:background="@drawable/bg_inner_box"
+
+    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Please Select the Image Source"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        tools:ignore="HardcodedText"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+
+
+        >
+        <android.widget.Button
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="Cancel"
+            tools:ignore="HardcodedText"
+            android:textSize="14sp"
+            android:textColor="#0D8011"
+            android:id="@+id/cancel_button"
+            />
+        <android.widget.Button
+            android:layout_width="0px"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="Camera"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText"
+            android:textColor="#0D8011"
+            android:id="@+id/camera_button"
+            android:layout_marginLeft="30dp"/>
+        <android.widget.Button
+            android:layout_width="0px"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="Gallery"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText"
+            android:textColor="#0D8011"
+            android:id="@+id/gallery_button"/>
+
+    </LinearLayout>
+
+</LinearLayout>

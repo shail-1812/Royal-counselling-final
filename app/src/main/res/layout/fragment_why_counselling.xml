@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ui.WhyCounsellingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/pt_sans"
+            android:gravity="center"
+            android:text="Why Counselling?"
+            android:textColor="#000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/inner_bg">
+
+            <TextView
+                android:id="@+id/tv_why_counselling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/pt_sans"
+                android:lineSpacingExtra="8dp"
+                android:padding="15dp"
+                android:justificationMode="inter_word"
+                android:textStyle="bold"
+                android:text="Young minds need proper guidance that will make them potent to stand in society and make a name for themselves. Counselling not only helps them to make decisions pertaining to their professional career, but it also makes them confident and mentally prepare them for societal hardships.Teachers help children to recognize their strengths, sharpen their interests and provides them with career options to explore their dreams. In a recent news report in India Today, about 85% of students have no clue about which career options to choose for higher education."
+                android:textColor="#434343"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+        </androidx.core.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/btn_why_counselling_register"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/button_colour_change"
+            android:fontFamily="@font/pt_sans"
+            android:padding="10dp"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="50dp"
+            android:baselineAlignBottom="true"
+            android:contentDescription="footer"
+            android:foregroundGravity="bottom"
+            android:src="@drawable/logo4"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+
+</ScrollView>

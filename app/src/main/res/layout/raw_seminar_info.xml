@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_seminar_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/pt_sans"
+            android:gravity="center"
+            android:text="Seminar Name"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="#59A288E3"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="5dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_seminar_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/pt_sans"
+                    android:text="Seminar Description"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="20dp"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:orientation="horizontal">-->
+
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:fontFamily="@font/pt_sans"-->
+                <!--                        android:text="Registration Start -"-->
+                <!--                        android:textColor="#000"-->
+                <!--                        android:textSize="13sp"-->
+                <!--                        tools:ignore="HardcodedText" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/tv_registration_start"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:fontFamily="@font/pt_sans"-->
+                <!--                        android:text=""-->
+                <!--                        android:textColor="#000"-->
+                <!--                        android:textSize="13sp"-->
+                <!--                        tools:ignore="HardcodedText" />-->
+                <!--                </LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/pt_sans"
+                        android:gravity="center"
+                        android:text="Registration End"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tv_registration_end"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/pt_sans"
+                        android:gravity="center"
+                        android:text="Registration End"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText"
+                        android:layout_marginStart="10dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/pt_sans"
+                        android:gravity="center"
+                        android:text="Seminar Type"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tv_seminar_type"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/pt_sans"
+                        android:gravity="center"
+                        android:text="Seminar Type"
+                        android:textColor="#000"
+                        android:layout_marginStart="10dp"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText"
+                        android:layout_marginLeft="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/pt_sans"
+                        android:gravity="center"
+                        android:text="Seminar Start"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+
+                    <TextView
+                        android:id="@+id/tv_seminar_start"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/pt_sans"
+                        android:gravity="center"
+                        android:text="Seminar Start"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="10dp"
+                        tools:ignore="HardcodedText"
+                        android:layout_marginStart="10dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/pt_sans"
+                        android:gravity="center"
+                        android:text="Seminar End"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+
+                    <TextView
+                        android:id="@+id/tv_seminar_end"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/pt_sans"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="Seminar End"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText"
+                        android:layout_marginStart="10dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:id="@+id/edt_purpose"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:autofillHints=""
+            android:background="@drawable/edt_background"
+            android:drawableStart="@drawable/ic_baseline_info_24"
+            android:drawableLeft="@drawable/ic_baseline_info_24"
+            android:drawablePadding="15dp"
+            android:drawableTint="#7E000000"
+            android:fontFamily="@font/pt_sans"
+            android:gravity="center"
+            android:hint="Registration Purpose"
+            android:inputType="text"
+            android:padding="10dp"
+            android:paddingHorizontal="10dp"
+            android:textColor="#000"
+            android:textColorHint="#7E000000"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText,UnusedAttribute" />
+
+
+        <Button
+            android:id="@+id/btn_register_seminar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal='70dp'
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/button_colour_change"
+            android:fontFamily="@font/pt_sans"
+            android:padding="15dp"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="45dp"
+            android:contentDescription="footer"
+            android:src="@drawable/logo4"
+            tools:ignore="HardcodedText" />
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_why_counselling"
+            android:icon="@drawable/ic_baseline_info_24"
+            android:title="Why Counselling?"
+            tools:ignore="HardcodedText" />
+
+        <item
+            android:id="@+id/nav_view_seminar"
+            android:icon="@drawable/ic_baseline_preview_24"
+            android:title="View all seminars"
+            tools:ignore="HardcodedText" />
+
+        <item
+            android:id="@+id/nav_view_registered_seminar"
+            android:icon="@drawable/ic_baseline_assignment_ind_24"
+            android:title="View Registered seminar"
+            tools:ignore="HardcodedText" />
+
+        <item
+            android:id="@+id/nav_view_personal_counselling"
+            android:icon="@drawable/ic_baseline_app_registration_24"
+            android:title="Book Personal Counselling"
+            tools:ignore="HardcodedText" />
+        <item
+            android:id="@+id/nav_view_personal_counselling_request"
+            android:icon="@drawable/ic_baseline_preview_24"
+            android:title="View My Counselling "
+            tools:ignore="HardcodedText" />
+        <item
+            android:id="@+id/nav_view_ppt_requests"
+            android:icon="@drawable/ic_baseline_pending_actions_24"
+            android:title="PPT Request"
+            tools:ignore="HardcodedText" />
+
+
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/ic_baseline_local_phone_24_nav"
+            android:title="Contact Us"
+            tools:ignore="HardcodedText" />
+
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_baseline_info_24"
+            android:title="About Us"
+            tools:ignore="HardcodedText" />
+
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_baseline_login_24"
+            android:title="Log Out"
+            tools:ignore="HardcodedText" />
+
+
+    </group>
+</menu>

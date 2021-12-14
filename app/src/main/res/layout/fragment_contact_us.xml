@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".ui.ContactUsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/pt_sans"
+            android:gravity="center_horizontal"
+            android:text="Contact Us"
+            android:textColor="#000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,MissingConstraints" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:fontFamily="@font/pt_sans"
+            android:gravity="center"
+            android:text="Your Needs? Our solution"
+            android:textColor="#000"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/edt_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="#39000000" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/pt_sans"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Contact us on \n+91 93761 39635. \n\nOr visit us at \n\n2nd and 3rd floor,Surbhi Complex,Opp Municipal Market, Chimanlal Girdharlal Rd, Vasant Vihar, \nNavrangpura, Ahmedabad, Gujarat 380009."
+            android:textColor="#434343"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+<!--        <fragment-->
+<!--            android:id="@+id/map"-->
+<!--            android:name="com.google.android.gms.maps.SupportMapFragment"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="300dp"-->
+<!--            android:layout_marginHorizontal="20dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            tools:context=".MapsActivity"-->
+<!--            tools:ignore="FragmentTagUsage" />-->
+
+        <ImageView
+            android:id="@+id/map_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/map_image"
+            android:tag="https://goo.gl/maps/HQ9mGk1inTB7UGi7A" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="45dp"
+            android:contentDescription="footer"
+            android:src="@drawable/logo4"
+            android:tag="https://goo.gl/maps/HQ9mGk1inTB7UGi7A"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</ScrollView>
