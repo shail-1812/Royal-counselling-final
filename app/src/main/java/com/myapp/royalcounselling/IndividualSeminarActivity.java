@@ -96,19 +96,17 @@ public class IndividualSeminarActivity extends AppCompatActivity {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(IndividualSeminarActivity.this,"Fees is : "+sFees.getText().toString(),Toast.LENGTH_LONG).show();
-                if(sFees.getVisibility() == View.GONE){
-                    loadData(purpose.getText().toString(), email, seminarId);
-                }else{
+                //Toast.makeText(IndividualSeminarActivity.this,"Fees is : "+sFees.getText().toString(),Toast.LENGTH_LONG).show();
+                if (sFees.getVisibility() != View.GONE) {
 
 
                     String url = pLink.getText().toString();
                     Intent webIntent = new Intent(Intent.ACTION_VIEW);
                     webIntent.setData(Uri.parse(url));
                     startActivity(webIntent);
-                    //finish();
-                    loadData(purpose.getText().toString(), email, seminarId);
+                    finish();
                 }
+                loadData(purpose.getText().toString(), email, seminarId);
             }
         });
     }
@@ -150,13 +148,14 @@ public class IndividualSeminarActivity extends AppCompatActivity {
                     intent.putExtra("seminarID", str);
                 }
 
-                startActivity(intent);
+
                 if (sFees.getVisibility() == View.GONE) {
                     Toast.makeText(IndividualSeminarActivity.this, "Seminar link sent on your email.", Toast.LENGTH_LONG).show();
                 } else {
                     Toast.makeText(IndividualSeminarActivity.this, "Seminar link will be sent once the admin approves the payment.", Toast.LENGTH_LONG).show();
                 }
 
+                startActivity(intent);
 
             } catch (Exception e) {
                 e.printStackTrace();

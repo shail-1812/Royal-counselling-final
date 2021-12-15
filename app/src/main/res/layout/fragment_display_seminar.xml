@@ -53,7 +53,7 @@
             android:textColor="#fff"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:visibility="invisible"
+            android:visibility="gone"
             tools:ignore="HardcodedText" />
 
         <ListView
